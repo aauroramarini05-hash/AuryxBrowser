@@ -1,7 +1,26 @@
-defaultConfig {
-    applicationId "com.xdustatom.auryxbrowser"
-    minSdkVersion 21
-    targetSdkVersion 34
-    versionCode 121001
-    versionName "1.210.01 Beta"
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 34
+
+    defaultConfig {
+        applicationId "com.xdustatom.auryxbrowser"
+        minSdkVersion 21
+        targetSdkVersion 34
+        versionCode 121001
+        versionName "1.210.01 Beta"
+    }
+
+    buildTypes {
+        debug {
+            debuggable true
+        }
+        release {
+            minifyEnabled false
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
 }
